@@ -1,14 +1,14 @@
-#!/usr/bin/env bash
+#Adriana Flores
 
 echo "GUESSING GAME"
 
-function ask {
+function guess {
 	echo "Enter the number of files in the current directory:"
 	read answer
     files=$(ls -1 | wc -l)
 }
 
-ask
+guess
 
 while [[ $answer -ne $files ]]
 do
@@ -18,7 +18,7 @@ do
 	else
 		echo "Too high, try again"
 	fi
-	ask
+	guess
 done
 
 echo "CORRECT"
